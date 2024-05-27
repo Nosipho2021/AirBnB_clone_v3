@@ -1,4 +1,4 @@
-# api/v1/views/places.py
+
 
 from flask import jsonify, request, abort
 from models import storage
@@ -78,4 +78,3 @@ def update_place(place_id):
             setattr(place, key, value)
     place.save()
     return jsonify(place.to_dict())
-

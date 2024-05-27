@@ -1,4 +1,4 @@
-# api/v1/views/places_reviews.py
+
 
 from flask import jsonify, request, abort
 from models import storage
@@ -78,4 +78,3 @@ def update_review(review_id):
             setattr(review, key, value)
     review.save()
     return jsonify(review.to_dict())
-

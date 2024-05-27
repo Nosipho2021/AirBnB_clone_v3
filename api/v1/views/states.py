@@ -1,4 +1,4 @@
-# api/v1/views/states.py
+
 
 from flask import jsonify, request, abort
 from models import storage
@@ -65,4 +65,3 @@ def delete_state(state_id):
     state.delete()
     storage.save()
     return jsonify({})
-

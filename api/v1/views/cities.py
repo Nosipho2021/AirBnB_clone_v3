@@ -1,4 +1,4 @@
-# api/v1/views/cities.py
+
 
 from flask import jsonify, request, abort
 from models import storage
@@ -72,4 +72,3 @@ def update_city(city_id):
             setattr(city, key, value)
     city.save()
     return jsonify(city.to_dict())
-
